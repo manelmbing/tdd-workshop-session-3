@@ -29,7 +29,7 @@ class AccountCreationTest {
     * + An error is expected if more than two holders are provided (B)
     * + Account can be created with no initial balance, initial balance will be 0.
     * + Account can be created with initial balance, then a movement will be created too.
-    * - An error is expected if initial balance is lower than 0. (B)
+    * + An error is expected if initial balance is lower than 0. (B)
     * - Balance must be a real (decimal) number. (I)
     * - Holders must be registered clientes (E)
     *
@@ -88,7 +88,5 @@ class AccountCreationTest {
         assertEquals(1, account.getMovements().size());
         assertEquals(BigDecimal.TEN, account.getMovements().get(0).getValue());
     }
-
-
 
 }
